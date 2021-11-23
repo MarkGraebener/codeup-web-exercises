@@ -196,7 +196,7 @@ console.log(difference(4, 7));
 let product = (x, y) => x * y;
 console.log(product(4,23));
 
-let pi = (x, y) => x / y;git
+let pi = (x, y) => x / y;
 console.log(pi(22, 7))
 
 let remainder = (x, y) => x % y;
