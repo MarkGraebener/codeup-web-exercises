@@ -1,4 +1,3 @@
-
 //
 // console.log('1' + 2)
 // // "12"
@@ -78,7 +77,7 @@ sample = sample.replace("Students", "Class")
 console.log(sample)
 console.log(sample.indexOf("c"))
 console.log(sample.indexOf("C"))
-console.log(sample.substring(sample.indexOf("C"),12))
+console.log(sample.substring(sample.indexOf("C"), 12))
 
 // Write some JavaScript code, that is, variables and operators, to describe the following scenarios. Do not worry about the real operations to get the values, the goal of these exercises is to understand how real world conditions can be represented with code.
 //
@@ -90,6 +89,7 @@ function costOfRental(nameOfMovie, daysRented) {
     let totalCost = daysRented * costPerDay;
     console.log(nameOfMovie + " " + "$" + totalCost + ".")
 }
+
 costOfRental("littleMermaid", 3)
 
 //     Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
@@ -98,31 +98,33 @@ function faceMoneyPerWeek(hoursPerWeek, moneyPerHour) {
     let moneyEarned = hoursPerWeek * moneyPerHour;
     return moneyEarned
 }
+
 function amazonMoneyPerWeek(hoursPerWeek, moneyPerHour) {
     let moneyEarned = hoursPerWeek * moneyPerHour;
     return moneyEarned
 }
+
 function googleMoneyPerWeek(hoursPerWeek, moneyPerHour) {
     let moneyEarned = hoursPerWeek * moneyPerHour;
     return moneyEarned
 }
 
-console.log(faceMoneyPerWeek(10, 350) + amazonMoneyPerWeek(4, 380) + googleMoneyPerWeek(6,400))
+console.log(faceMoneyPerWeek(10, 350) + amazonMoneyPerWeek(4, 380) + googleMoneyPerWeek(6, 400))
 
 // A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
-// function canAttendClass(class){
-//     if (
-//         !class
-//             console.log("class scheduled");
-//     )else(
+// let canAttendClass = (class) => {
+//     if (!class)(
+//      console.log("class scheduled");
+//     )
+//     else(
 //         console.log("you have an class")
 //     )
 // }
 //     A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
 
-// productSale = (itemCount, isPremium) => {
-//     if (
-//         isPremium || litemCount >= 2;
+// let productSale = (itemCount, isPremium) => {
+//     if (isPremium || itemCount >= 2)(
+//
 //         return "you got the sale"
 //     )
 //         return "no sale for you"
@@ -143,6 +145,23 @@ console.log(faceMoneyPerWeek(10, 350) + amazonMoneyPerWeek(4, 380) + googleMoney
 let username = 'codeup';
 let password = 'notastrongpassword';
 let passCharMin = password.length > 5;
-let passUserNameCheck = password.includes(username.substring(1,username.length));
+let passUserNameCheck = password.includes(username.substring(1, username.length));
 let userNameMaxChar = username.length < 20;
 let noWhiteSpace = (username && password === username.trim() && password.trim());
+
+
+let isAtBar = false;
+let bac = .00;
+let age = 22;
+let cashOnHand = 7.99;
+
+
+let canHaveADrink = (bac < .08 && age >= 21 && cashOnHand >= 5.00) // true && false && true && true --> false
+
+if (!canHaveADrink) { // true or false
+    console.log("No brewski my dude!");
+} else if(!isAtBar){ // it was not true
+    console.log("have a brew dude togo");
+}else{
+    console.log("have a cold beer")
+}
