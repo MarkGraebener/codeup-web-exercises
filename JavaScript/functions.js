@@ -1,32 +1,35 @@
 "use strict";
 
-/**
- * TODO:
- * Create a function called 'sayHello' that takes a parameter 'name'.
- * When called, the function should return a message that says hello to the passed in name.
- *
- * Example
- * > sayHello("codeup") // returns "Hello, codeup!"
- */
+// /**
+//  * TODO:
+//  * Create a function called 'sayHello' that takes a parameter 'name'.
+//  * When called, the function should return a message that says hello to the passed in name.
+//  *
+//  * Example
+//  * > sayHello("codeup") // returns "Hello, codeup!"
+//  */
 
-/**
- * TODO:
- * Call the function 'sayHello' and pass your name as a string literal argument.
- * Store the result of the function call in a variable named 'helloMessage'.
- *
- * console.log 'helloMessage' to check your work
- */
 
-/**
- * TODO:
- * Store your name as a string in a variable named 'myName', and pass that
- * variable to the 'sayHello' function. You should see the same output in the
- * console.
- */
+// /**
+//  * TODO:
+//  * Call the function 'sayHello' and pass your name as a string literal argument.
+//  * Store the result of the function call in a variable named 'helloMessage'.
+//  *
+//  * console.log 'helloMessage' to check your work
+//  */
+
+
+// /**
+//  * TODO:
+//  * Store your name as a string in a variable named 'myName', and pass that
+//  * variable to the 'sayHello' function. You should see the same output in the
+//  * console.
+//  */
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+
 
 /**
  * TODO:
@@ -57,6 +60,19 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+// let serviceLevel = prompt("What is the level of service you received 1 - 10?")
+// let billTotal = prompt("What is the total bill?")
+// let calcTip = (billTotal, serviceLevel) => {
+//
+//     if(serviceLevel >= 7) {
+//         return "you should tip:  " + "$" + (billTotal * .35)
+//     } else if( serviceLevel <= 4) {
+//         return "you're probably named Karen!";
+//     } else{
+//         return "you should tip:  " + "$" + (billTotal * .15)
+//     }
+// }
+// alert(calcTip(100, serviceLevel));
 
 /**
  * TODO:
@@ -78,3 +94,30 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > applyDiscount(originalPrice, dicountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
+ */
+
+let applyDiscount = (price, precentageOff) => {
+    let toDecimal = precentageOff / Math.pow(10, 2) // takes % and converts to decimal
+    let discountedPrice = price - (price * toDecimal); // math to subtract discount amount to new price total
+    // console.log(toDecimal)
+    return "$" + discountedPrice + "  Is you're new total!";
+}
+
+console.log(applyDiscount(100, 10))
+
+
+let myName = "Mark";
+let sayHello = (myName) => "Hello, " + myName + "!";
+let helloMessage = sayHello(myName)
+console.log(helloMessage);
+
+let random = Math.floor((Math.random() * 3) + 1);
+
+let isTwo = (num) => {
+    if (num === 2) {
+        return num + ": " + "hey that's a two"
+    } else {
+        return num + ": " + "that's not a two"
+    }
+}
+console.log(isTwo(random));
