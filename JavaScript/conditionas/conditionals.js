@@ -111,27 +111,27 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-let getRndInteger = Math.floor(Math.random() * (6));
-
-function calcTotal(getRndInteger, totalPrice) {
-
-    if (getRndInteger === 1) {
-        return "$ " + (totalPrice - (totalPrice * .1)) + "  is you new total";
-    } else if (getRndInteger === 2) {
-        return "$ " + (totalPrice - (totalPrice * .25)) + "  is you new total";
-    } else if (getRndInteger === 3) {
-        return "$ " + (totalPrice - (totalPrice * .35)) + "  is you new total";
-    } else if (getRndInteger === 4) {
-        // console.log(typeof (totalPrice - (totalPrice * .35)))
-        return "$ " + (totalPrice - (totalPrice * .5)) + "  is you new total";
-    } else if (getRndInteger === 5) {
-        return " It's your lucky day, its free!!";
-    } else {
-        return "Sorry no luck for you :( "
-    }
-}
-
-console.log(calcTotal(getRndInteger, 100));
+// let getRndInteger = Math.floor(Math.random() * (6));
+//
+// function calcTotal(getRndInteger, totalPrice) {
+//
+//     if (getRndInteger === 1) {
+//         return "$ " + (totalPrice - (totalPrice * .1)) + "  is you new total";
+//     } else if (getRndInteger === 2) {
+//         return "$ " + (totalPrice - (totalPrice * .25)) + "  is you new total";
+//     } else if (getRndInteger === 3) {
+//         return "$ " + (totalPrice - (totalPrice * .35)) + "  is you new total";
+//     } else if (getRndInteger === 4) {
+//         // console.log(typeof (totalPrice - (totalPrice * .35)))
+//         return "$ " + (totalPrice - (totalPrice * .5)) + "  is you new total";
+//     } else if (getRndInteger === 5) {
+//         return " It's your lucky day, its free!!";
+//     } else {
+//         return "Sorry no luck for you :( "
+//     }
+// }
+//
+// console.log(calcTotal(getRndInteger, 100));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -162,22 +162,35 @@ console.log(calcTotal(getRndInteger, 100));
  * HINT: The way we prompt for a value could be improved
  **/
 
-let result = confirm('Do you want to pick a number?');
-let numPicker = (result) => {
-    if (result) {
-        let luckyNum = Math.floor(Math.random() * (6));
-        if (luckyNum % 2 === 0) {
-            alert("your number is even");
-            alert(luckyNum + "  is your number multiplied by 100");
-        } else {
-            alert("your number is odd");
-            alert(luckyNum + "  is your number multiplied by 100");
-        }
 
-    } else {
-        alert("Well never mind then :(")
+let numPicker = () => {
+    let result = confirm('Do you want to pick a number?');
+    if (result) {
+        let luckyNum = prompt("Pick a number")//Math.floor(Math.random() * (6));
+        console.log(typeof parseInt(luckyNum))
+        if(parseInt(luckyNum)) {
+
+            if (luckyNum % 2 === 0) {
+                luckyNum >= 0 ? alert("Your number is positive") : alert("Your number is negative");
+                alert("your number is even");
+                luckyNum = luckyNum * 100;
+                alert(luckyNum + "  is your number multiplied by 100");
+            } else {
+                console.log("should be odd: ", luckyNum);
+                luckyNum >= 0 ? alert("Your number is positive") : alert("Your number is neg");
+                alert("your number is odd");
+                luckyNum = luckyNum * 100;
+                alert(luckyNum + "  is your number multiplied by 100");
+            }
+        } else {
+            console.log("typeof: ", luckyNum)
+            alert(" that's not a number");
+        }
     }
-}
-numPicker(result)
+        else {
+            alert("Well never mind then :(")
+        }
+    }
+    numPicker()
 
 

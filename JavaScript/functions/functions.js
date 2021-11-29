@@ -60,19 +60,19 @@
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-// let serviceLevel = prompt("What is the level of service you received 1 - 10?")
-// let billTotal = prompt("What is the total bill?")
-// let calcTip = (billTotal, serviceLevel) => {
-//
-//     if(serviceLevel >= 7) {
-//         return "you should tip:  " + "$" + (billTotal * .35)
-//     } else if( serviceLevel <= 4) {
-//         return "you're probably named Karen!";
-//     } else{
-//         return "you should tip:  " + "$" + (billTotal * .15)
-//     }
-// }
-// alert(calcTip(100, serviceLevel));
+let serviceLevel = prompt("What is the level of service you received 1 - 10?")
+let billTotal = prompt("What is the total bill?")
+let calcTip = (billTotal, serviceLevel) => {
+
+    if(serviceLevel >= 7) {
+        return "you should tip:  " + "$" + (billTotal * .35)
+    } else if( serviceLevel <= 4) {
+        return "you're probably named Karen! and you are not ever tipping anyway!";
+    } else{
+        return "you should tip:  " + "$" + (billTotal * .15)
+    }
+}
+alert(calcTip(billTotal, serviceLevel));
 
 /**
  * TODO:
@@ -96,20 +96,25 @@
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-let applyDiscount = (price, precentageOff) => {
-    let toDecimal = precentageOff / Math.pow(10, 2) // takes % and converts to decimal
+let myName = "Mark";
+let sayHello = (myName) => "Hello, " + myName + "!";
+let helloMessage = sayHello(myName)
+console.log(helloMessage);
+
+
+
+
+let applyDiscount = (price, percentageOff) => {
+    let toDecimal = percentageOff / Math.pow(10, 2) // takes % and converts to decimal
     let discountedPrice = price - (price * toDecimal); // math to subtract discount amount to new price total
     // console.log(toDecimal)
     return "$" + discountedPrice + "  Is you're new total!";
 }
 
-console.log(applyDiscount(100, 10))
+console.log(applyDiscount(100, .01))
 
 
-let myName = "Mark";
-let sayHello = (myName) => "Hello, " + myName + "!";
-let helloMessage = sayHello(myName)
-console.log(helloMessage);
+
 
 let random = Math.floor((Math.random() * 3) + 1);
 
