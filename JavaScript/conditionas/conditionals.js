@@ -167,27 +167,28 @@ let numPicker = () => {
     let result = confirm('Do you want to pick a number?');
     if (result) {
         let luckyNum = prompt("Pick a number")//Math.floor(Math.random() * (6));
-        console.log(typeof parseInt(luckyNum))
-        if(parseInt(luckyNum)) {
+        // console.log( parseInt(luckyNum), (luckyNum))
+        if(parseInt(luckyNum)) {   // parseInt(luckyNum) returns NaN if luckyNum is a string, NaN is a falsely
 
             if (luckyNum % 2 === 0) {
                 luckyNum >= 0 ? alert("Your number is positive") : alert("Your number is negative");
                 alert("your number is even");
-                luckyNum = luckyNum * 100;
-                alert(luckyNum + "  is your number multiplied by 100");
+                luckyNum = luckyNum + 100;
+                alert(luckyNum + "  is your number summed by 100");
             } else {
                 console.log("should be odd: ", luckyNum);
                 luckyNum >= 0 ? alert("Your number is positive") : alert("Your number is neg");
                 alert("your number is odd");
-                luckyNum = luckyNum * 100;
-                alert(luckyNum + "  is your number multiplied by 100");
+                luckyNum = luckyNum + 100;
+                alert(luckyNum + "  is your number summed by 100");
             }
-        } else {
-            console.log("typeof: ", luckyNum)
+
+        }else {
+            // console.log("typeof: ", luckyNum)
             alert(" that's not a number");
         }
     }
-        else {
+    else {
             alert("Well never mind then :(")
         }
     }
