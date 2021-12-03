@@ -35,7 +35,7 @@
 let logPyramid1 = () => {
     for(let i = 1; i < 10; i++) {
         let numerator = ((Math.pow(10, i) - 1) / 9)
-        console.log(numerator)
+        //console.log(numerator)
         console.log(i * numerator);
     }
 }
@@ -46,6 +46,7 @@ let logPyramid = () => {
     }
 }
 logPyramid1()
+logPyramid()
 // let math = (num1, num2) => {
 //     return Math.pow(num1,num2)
 // }
