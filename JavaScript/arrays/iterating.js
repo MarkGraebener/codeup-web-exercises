@@ -52,13 +52,13 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
     let firstElement = (arr) => {
-        console.log(arr[0])
+        return arr[0];
     }
     let secondElement = (arr) => {
-        console.log(arr[1])
+        return arr[1];
     }
     let thirdElement = (arr) => {
-        console.log(arr[2])
+        return arr[arr.length -1];
     }
     firstElement(names);
     secondElement(names);
