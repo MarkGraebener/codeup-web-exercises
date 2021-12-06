@@ -12,6 +12,14 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    let person = {
+        firstName: "Rick",
+        lastName: "Sanchez",
+        sayHello: function () {
+            return "Hello form " + this.firstName + " " + this.lastName;
+        }
+    };
+    console.log(person.sayHello());
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -36,12 +44,25 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+let registerOutPut = (name, amount) => {
+    if(amount >= 200){
+        let amount2 = (amount * 0.12);
+        console.log(name + " Has spent $" + amount + " and received a discount of 12% for a new total of: $" + amount2);
 
+    }else {
+        console.log(name + " Has a total of: $" + amount);
+    }
+}
+    for (let i = 0; i < shoppers.length; i++) {
+        registerOutPut(shoppers[i].name, shoppers[i].amount)
+
+    }
+// registerOutPut(shoppers[1].name, shoppers[1].amount)
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -66,20 +87,73 @@
      * Example Console Output:
      *
      *      Book # 1
-     *      Title: The Salmon of Doubt
-     *      Author: Douglas Adams
+     *      Title: Man and His Symbols
+     *      Author: Carl Jung
      *      ---
      *      Book # 2
-     *      Title: Walkaway
-     *      Author: Cory Doctorow
+     *      Title: Meditations
+     *      Author: Marcus Aurelius
      *      ---
      *      Book # 3
      *      Title: A Brief History of Time
      *      Author: Stephen Hawking
      *      ---
-     *      ...
+     *      Book # 4
+     *      Title: The Idiot
+     *      Author: Fyodor Dostoevsky
+     *
+     *      Book # 5
+     *      Title: Cosmos
+     *      Author: Carl Sagan
      */
-
+    let books = [
+        {
+        title: "Man and His Symbols",
+        author: {
+            firstName: "Carl",
+            lastName: "Jung",
+        }
+        },
+        {
+            title: "Meditations",
+            author: {
+                firstName: "Marcus",
+                lastName: "Aurelius",
+            }
+        },
+        {
+            title: "A Brief History of Time",
+            author: {
+                firstName: "Stephen",
+                lastName: "Hawking",
+            }
+        },
+        {
+            title: "The Idiot",
+            author: {
+                firstName: "Fyodor",
+                lastName: "Dostoevsky",
+            }
+        },
+        {
+            title: "Gravitation",
+            author: [
+                {firstName: "Charles W.", lastName: "Misner",},
+                {firstName: "Kip S.", lastName: "Thorne",},
+                {firstName: "John Archibald", lastName: "Wheeler",}
+            ]
+        }];
+    console.log(books)
+//     let makeBooks = (title, firstName, lastName) => {
+// books.unshift(
+//         books.title = (title),
+//         books.author.firstName = (firstName),
+//         books.author.lastName = (lastName)
+//     )
+//         console.log(books);
+//
+//     }
+//     makeBooks("Man and His Symbols", "Carl", "Jung")
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
