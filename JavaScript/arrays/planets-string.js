@@ -22,7 +22,7 @@ let planetsArray = planetsString.split("|")
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-    let planetStringBr = "<br>" + planetsArray.join("</br><br>") + "</br>";
+    let planetStringBr = planetsArray.join("<br>");
     console.log(planetStringBr);
     let planetStringsUl = "<ul>" + "<li>" + planetsArray.join("</li><li>") + "</li>" + "</ul>";
     console.log(planetStringsUl)
