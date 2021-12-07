@@ -147,8 +147,8 @@
     makeBooks("The five Archetypes", "Carl", "Jung")
     makeBooks("The 12 rules for life", "Jordan", "Peterson")
     // console.log(books)
-books.forEach(elem =>
-    console.log(elem)
+books.forEach((elem, i) =>
+    console.log(`Book #${i + 1} ${elem.title} By: ${elem.author.firstName} ${elem.author.lastName}`)
 )
     /**
      * Bonus:
