@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register with us</title>
+</head>
+<body>
+<div class="container">
+    <div class="form">
+        <form method="POST" action="https://request-inspector.glitch.me/">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <label for="bio">Bio:</label>
+            <br>
+            <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+            <br>
+            <label for="referral">How did you hear about us?</label>
+            <br>
+            <label for="billboard">
+                <input type="radio" name="referral" id="billboard" value="billboard">
+                billboard
+            </label>
+            <br>
+            <label for="radio">
+                <input type="radio" name="referral" id="radio" value="radioAdvertisement">
+                Radio Advertisement
+            </label>
+            <br>
+            <label for="internet">
+                <input type="radio" name="referral" id="internet" value="internetAdvertisement">
+                Internet Advertisement
+            </label>
+            <br>
+            <label for="other">
+                <input type="radio" name="referral" id="other" value="other">
+                Other
+            </label>
+            <br>
+            <label for="browser">What browser are you using?</label>
+            <br>
+            <select name="browser" id="browser">
+                <option value="chrome">Chrome</option>
+                <option value="brave">Brave</option>
+                <option value="duckDuckGo">Duck duck Go</option>
+            </select>
+            <br>
+            <button type="submit">Submit!</button>
+            <br>
+        </form>
+    </div>
+</div>
+</body>
+</html>
