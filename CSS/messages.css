@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.message1{
+    color: #48429E;
+    height: 3em;
+    width: 500px;
+background: #CDDEFF;
+    border-radius: 5px;
+    vertical-align: center;
+    margin: 12px 5px;
+}
+.message2{
+    color: #3C8757;
+    height: 3em;
+    width: 500px;
+    background: #CFF3DA;
+    border-radius: 5px;
+    vertical-align: center;
+    margin: 12px 5px;
+}
+.message3{
+    color: #A99946;
+    height: 3em;
+    width: 500px;
+    background: #FDFBC8;
+    border-radius: 5px;
+    vertical-align: center;
+    margin: 12px 5px;
+}
+
+.message4{
+    color: #A44C5F;
+    height: 3em;
+    width: 500px;
+    background: #FAD2D6;
+    border-radius: 5px;
+    vertical-align: center;
+    margin: 12px 5px;
+}
