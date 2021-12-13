@@ -13,6 +13,8 @@ background: #CDDEFF;
     border-radius: 5px;
     vertical-align: center;
     margin: 12px 5px;
+    line-height: 3em;
+
 }
 .message2{
     color: #3C8757;
@@ -22,6 +24,8 @@ background: #CDDEFF;
     border-radius: 5px;
     vertical-align: center;
     margin: 12px 5px;
+    line-height: 3em;
+
 }
 .message3{
     color: #A99946;
@@ -31,6 +35,8 @@ background: #CDDEFF;
     border-radius: 5px;
     vertical-align: center;
     margin: 12px 5px;
+    /*text-align: center;*/
+    line-height: 3em;
 }
 
 .message4{
@@ -41,5 +47,7 @@ background: #CDDEFF;
     border-radius: 5px;
     vertical-align: center;
     margin: 12px 5px;
-    font-style: ;
+    /*font-style: ;*/
+    line-height: 3em;
+
 }
