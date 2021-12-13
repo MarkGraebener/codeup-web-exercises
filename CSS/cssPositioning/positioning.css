@@ -1,0 +1,101 @@
+/*create a new HTML file that contains two containers (400px in height and width). Each container should have 2 boxes inside of it (100px in height and width). Give your two containers some breathing space between each other and make sure to distinguish your containers and boxes by adding border, color,  etc.*/
+
+.one {
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    background: grey;
+    margin: 50px;
+}
+
+.blue {
+    height: 100px;
+    width: 100px;
+    border: 1px dashed black;
+    background: blue;
+    position: absolute;
+    top: 350px;
+}
+
+.orange {
+    height: 100px;
+    width: 100px;
+    border: 1px dashed black;
+    background: orange;
+}
+
+.two {
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    background: grey;
+    margin: 50px;
+}
+
+.yellow {
+    height: 100px;
+    width: 100px;
+    border: 1px dashed black;
+    background: yellow;
+    position: absolute;
+    top: 50px;
+    right: 17px;
+}
+
+.green {
+    height: 100px;
+    width: 100px;
+    border: 1px dashed black;
+    background: green;
+    position: relative;
+    bottom: 153px;
+    left: 298px;
+}
+
+
+.imageText {
+    height: 500px;
+    width: 600px;
+    background: grey;
+    margin: 50px;
+}
+
+.box {
+    margin: 5px;
+    border: 1px solid black;
+    width: auto;
+    height: 100px;
+    background: white;
+}
+
+.image1 {
+    height: 75px;
+    width: 75px;
+    background: #3B94D9;
+    float: left;
+}
+
+.text1 {
+    float: right;
+}
+.image2 {
+    height: 75px;
+    width: 75px;
+    background: #3B94D9;
+    float: right;
+}
+.text2 {
+    float: left;
+    text-align: center;
+}
+.image3 {
+    height: 75px;
+    width: 75px;
+    background: #3B94D9;
+    float: left;
+}
+.text3 {
+    float: right;
+    text-align: center;
+}
+
