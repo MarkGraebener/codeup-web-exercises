@@ -67,6 +67,20 @@ a {
     position: absolute;
     top: 250px;
 }
+.profile-details{
+    float: left;
+    width: calc(25% - 3em);
+}
+.profile-details{
+    float: left;
+    width: calc(50% - 3em);
+    background: #cbffcd;
+}
+.who-to-follow{
+    float: right;
+    width: calc(25% - 3em);
+    background: #3B94D9;
+}
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
