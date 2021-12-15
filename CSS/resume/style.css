@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px 0 5px 20px;
+
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center ;
+    margin-top: 50px;
+}
+li{
+    margin: 2px 0 1px 1px;
+    /*list-style: none;*/
+}
+/*objective class*/
+.objective{
+    display: flex;
+    flex-direction: row;
+    margin: 70px 0 10px 30px;
+    align-items: center;
+}
+.objective h3{
+    flex-direction: row;
+    /*width: 20%;*/
+}
+.objective p{
+    flex-direction: row;
+    margin-left: 10px;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*padding-top: 2px;*/
+}
+/*qualifications*/
+.qualifications{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 30px;
+}
+.qualifications h3{
+margin-bottom: 10px;
+}
+/*employment*/
+.history{
+    margin: 10px 0 10px 30px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: flex-end;*/
+}
+.history h3{
+    margin-bottom: 10px;
+
+}
+.employment {
+    display: flex;
+    flex-direction: column;
+    /*align-items: flex-end;*/
+}
+
+/*education*/
+.education{
+    margin: 10px 0 10px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.education h3{
+    margin-bottom: 10px;
+
+}
