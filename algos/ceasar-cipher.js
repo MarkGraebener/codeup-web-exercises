@@ -10,7 +10,9 @@
 // take that index
 // output: a number associated with the shift and letter of shifted value
 const englishAlphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+let makeCyfer = (arr) => {
 
+}
 //decrypt function//
 //takes in array of shift value  and letters of shifted value//
 // output: an array of a string that is each un shifted number to the original char//
