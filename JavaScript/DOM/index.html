@@ -1,67 +1,106 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DOM: Query and Modify</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>DOM</title>
 </head>
 <body>
-
-<h1 id="main-header">Hello World!</h1>
-<ul>
-    <li data-dbid="1">Item 1</li>
-    <li data-dbid="2">Item 2</li>
-    <li data-dbid="3">Item 3</li>
-    <li data-dbid="4">Item 4</li>
-    <li data-dbid="5">Item 5</li>
-</ul>
-<h2 id="sub-header">Hello Again.</h2>
-<p class="sub-paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-</p>
-
+<div class="container">
+    <h1 id="main-header">Hello World!</h1>
+    <ul>
+        <li data-dbid="1">Item 1</li>
+        <li data-dbid="2">Item 2</li>
+        <li data-dbid="3">Item 3</li>
+        <li data-dbid="4">Item 4</li>
+        <li data-dbid="5">Item 5</li>
+    </ul>
+    <h2 id="sub-header">Hello Again.</h2>
+    <p class="sub-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <button class="one btn btn-block btn-outline-danger m-3" >click for header</button>
+    <br>
+    <button class="two btn btn-block btn-outline-danger m-3" >click for subHeader</button>
+    <br>
+    <button class="three btn btn-block btn-outline-danger m-3" >click for every other list item</button>
+    <br>
+    <button class="four btn btn-block btn-outline-danger m-3" >click for p tag change
+    </button>
+</div>
 <script>
+<!--    can you only add event listener to an id? why not classname?-->
     (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         let mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        let listenerOne = function (e) {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+        document.getElementsByClassName("one")[0].addEventListener('click', listenerOne);
+
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById("sub-header");
         // console.log(subHeader);
         // TODO: Set the text color of subHeader to blue
         // subHeader.setAttribute("style","color: blue");
-        subHeader.style.color = "blue";
+        let listenerTwo = function (e) {
+            subHeader.style.color = "blue";
+        }
+        document.getElementsByClassName("two")[0].addEventListener('click', listenerTwo);
+
 
         // TODO: Uncomment the next line and get all list items
         let listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            let dbId = listItems[i].getAttribute("data-dbid");
-            if (dbId % 2 === 0){
-                listItems[i].setAttribute("style", "color: grey");
+        let listenerThree = function (e) {
+            for (let i = 0; i < listItems.length; i++) {
+                let dbId = listItems[i].getAttribute("data-dbid");
+                if (dbId % 2 === 0) {
+                    listItems[i].setAttribute("style", "color: grey");
 
-            }
-        }
+                }
+            }        }
+        document.getElementsByClassName("three")[0].addEventListener('click', listenerThree);
+
+
         // TODO: Set text color of li with dbid = 1 to blue
-        // listItems[0].style.color = "blue"; why no work?
-        listItems[0].setAttribute("style", "color: blue");
-        console.log(listItems); // dont understand this console.log
+        listItems[0].style.color = "blue";
+        // listItems[0].setAttribute("style", "color: blue");
+        console.log(listItems[0]); // dont understand this console.log
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.getElementsByClassName("sub-paragraph")
-
+        console.log(subParagraphs);
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        // subParagraphs.innerText = "Mission Accomplished!"; // no work, no access to innertext method
+        let listenerFour = function (e) {
+            subParagraphs[0].innerText = "Mission Accomplished!"; // needs to access array
+        }
+        document.getElementsByClassName("four")[0].addEventListener('click', listenerFour);
+
+
     })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 </body>
 </html>
