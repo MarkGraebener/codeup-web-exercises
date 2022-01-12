@@ -44,16 +44,23 @@
         let listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
+        for (let i = 0; i < listItems.length; i++) {
+            let dbId = listItems[i].getAttribute("data-dbid");
+            if (dbId % 2 === 0){
+                listItems[i].setAttribute("style", "color: grey");
+
+            }
+        }
         // TODO: Set text color of li with dbid = 1 to blue
         // listItems[0].style.color = "blue"; why no work?
         listItems[0].setAttribute("style", "color: blue");
-        console.log(listItems);
+        console.log(listItems); // dont understand this console.log
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.getElementsByClassName("sub-paragraph")
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerText = "Mission Accomplished!";
+        // subParagraphs.innerText = "Mission Accomplished!"; // no work, no access to innertext method
     })();
 </script>
 </body>
