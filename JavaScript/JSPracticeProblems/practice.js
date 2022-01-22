@@ -109,24 +109,32 @@
 // write a function that accepts a string and checks whether each string is upperCase or lowerCase and returns "letter  [insert letter] is uppercase/lowercase", accordingly.  Bonus: return "is not a character" if it's not a letter
 //
 // input example: "bJIENsdfRAIRVIrsRFAijgRar"
-let string =  "bJIENsdfRAIRVIrsRFAijgRar"
+
+
+
+let string =  "bJIENsdfRAIRVIrsRF-+A55ijgRar"
 let i = 0;
 let char='';
 while (i <= string.length -1){
     char = string.charAt(i);
-    if (!isNaN(char * 1)){
-        console.log(`${char} is not a letter`);
-    }else{
-        if (char == char.toUpperCase()) {
+    if (char.toLowerCase() != char.toUpperCase()){
+        if (char === char.toUpperCase()) {
             console.log(`${char} is uppercase`);
         }
-        if (char == char.toLowerCase()){
+        if (char === char.toLowerCase()){
             console.log(`${char} is lowercase`);
         }
+    }else{
+        console.log(`${char} is not a letter`);
+
     }
     i++;
 }
 
-
+// function isLetter(c) {
+//     return c.toLowerCase() != c.toUpperCase();
+// }
+//
+// console.log(isLetter("="));
 
 
