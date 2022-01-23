@@ -9,8 +9,9 @@ $(document).ready(function() {
 let alert1 = $("hOneId");
 console.log(alert1);
 $("#hOneId").click(function() {
-    alert("hi" +  alert1.text() );
+    $(".liClass").attr("style","background:orange;border:3px solid #ccc;");
 });
 
 $(".liClass").css("border", "1px  solid red");
-$(".liClass").css("font-size", "30px");
+// $(".liClass").css("font-size", "30px");
+// $(".liClass").attr("style","background:orange;border:3px solid #ccc;")
