@@ -12,6 +12,6 @@ $("#hOneId").click(function() {
     $(".liClass").attr("style","background:orange;border:3px solid #ccc;");
 });
 
-$(".liClass").css("border", "1px  solid red");
+$(".liClass").css("border", "1px  solid red").css("font-size", "30px");
 // $(".liClass").css("font-size", "30px");
 // $(".liClass").attr("style","background:orange;border:3px solid #ccc;")
