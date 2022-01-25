@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button class="btn">Refresh</button>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        "use strict";
+        // $.ajax("https://api.nasa.gov/insight_weather/?api_key=9o0rVdczIG1Mh6MvgeW04RwDcGorRpdVt0uM8Qkm&feedtype=json&ver=1.0")
+        // .done(function (data){
+        //   console.log(data);
+        // })
+
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+        $.ajax("../ajax/data/inventory.json")
+            .done(function (data) {
+                console.log(data)
+            })
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        // $.ajax("../ajax/data/inventory.json")
+        //     .done(function (data) {
+        //         $(data).each(function (elm) {
+        //             let insertProductsId = $("#insertProducts");
+        //             insertProductsId.append("<tr>");
+        //             insertProductsId.append("<td>" + data[elm].title + "</td>");
+        //             insertProductsId.append("<td>" + data[elm].quantity + "</td>");
+        //             insertProductsId.append("<td>" + data[elm].price + "</td>");
+        //             data[elm].categories.forEach(function (elm) {
+        //                 insertProductsId.append("<td>" + elm + "</td>")
+        //             });
+        //             insertProductsId.append("</tr>");
+        //         })
+        //     })
+
+        let tableRender = () => {
+            $.ajax("../ajax/data/inventory.json")
+                .done(function (data) {
+                    $(data).each(function (elm) {
+                        let insertProductsId = $("#insertProducts");
+                        insertProductsId.append("<tr>");
+                        insertProductsId.append("<td>" + data[elm].title + "</td>");
+                        insertProductsId.append("<td>" + data[elm].quantity + "</td>");
+                        insertProductsId.append("<td>" + data[elm].price + "</td>");
+                        data[elm].categories.forEach(function (elm) {
+                            insertProductsId.append("<td>" + elm + "</td>")
+                        });
+                        insertProductsId.append("</tr>");
+                    })
+                })
+        }
+        $(".btn").click(tableRender())
+
+    })();
+</script>
+
+</body>
+</html>
+
