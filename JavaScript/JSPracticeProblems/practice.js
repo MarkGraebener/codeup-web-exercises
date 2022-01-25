@@ -112,24 +112,24 @@
 
 
 
-let string =  "bJIENsdfRAIRVIrsRF-+A55ijgRar"
-let i = 0;
-let char='';
-while (i <= string.length -1){
-    char = string.charAt(i);
-    if (char.toLowerCase() != char.toUpperCase()){
-        if (char === char.toUpperCase()) {
-            console.log(`${char} is uppercase`);
-        }
-        if (char === char.toLowerCase()){
-            console.log(`${char} is lowercase`);
-        }
-    }else{
-        console.log(`${char} is not a letter`);
-
-    }
-    i++;
-}
+// let string =  "bJIENsdfRAIRVIrsRF-+A55ijgRar"
+// let i = 0;
+// let char='';
+// while (i <= string.length -1){
+//     char = string.charAt(i);
+//     if (char.toLowerCase() != char.toUpperCase()){
+//         if (char === char.toUpperCase()) {
+//             console.log(`${char} is uppercase`);
+//         }
+//         if (char === char.toLowerCase()){
+//             console.log(`${char} is lowercase`);
+//         }
+//     }else{
+//         console.log(`${char} is not a letter`);
+//
+//     }
+//     i++;
+// }
 
 // function isLetter(c) {
 //     return c.toLowerCase() != c.toUpperCase();
@@ -138,3 +138,23 @@ while (i <= string.length -1){
 // console.log(isLetter("="));
 
 
+// Write a function that finds duplicates, or repeating numbers in a string of numbers, and returns an object that shows how many times any repeating number is shown
+// INPUT: “42992338111134”
+// EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4} (edited)
+
+let stringNum = "42992338111134";
+let stToArr = stringNum.split("");
+console.log(stToArr);
+
+
+let stringSorted = stToArr.sort();
+console.log(stringSorted);
+
+let howManys = (arr) => {
+    let var1 = arr[0];
+    for(let i = 1; i < arr.length; i++) {
+        if(1 == var1){
+            arr.push();
+        }
+    }
+}
