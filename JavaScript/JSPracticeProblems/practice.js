@@ -151,9 +151,16 @@ let stringSorted = stToArr.sort();
 console.log(stringSorted);
 
 let howManys = (arr) => {
-    let var1 = arr[0];
+    // create an object with diff values into new property's
+    let var1 = {
+        arr1: arr[0],// set first value into array
+        newArr: function (){
+        //    function to create a new property with the array of next values
+        },
+    };
+    // loop through sorted array , push into property untill diff value then push new property
     for(let i = 1; i < arr.length; i++) {
-        if(1 == var1){
+        if(i === var1){
             arr.push();
         }
     }
