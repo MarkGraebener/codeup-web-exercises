@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>First Mapbox Map</title>
     <!-- Mapbox CSS -->
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Custom CSS -->
     <style>
         #map {
@@ -14,33 +14,71 @@
         }
     </style>
 
+
 </head>
 <body>
 
 <h1>My First Mapbox Map!</h1>
-
-<!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
-
+<div class="buttons">
+    <button id="zoom5">zoom x 5</button>
+    <button id="zoom10">zoom x 10</button>
+    <button id="zoom15">zoom x 15</button>
+    <button id="geocodeBtn">Go To Geocode</button>
+</div>
+<!-- The HTML element that serves as the Mapbox container -->
+<script src="tokens.js"></script>
+<script src="markers.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
 <!-- Mapbox JS -->
+
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="mapbox-geocoder-utils.js"></script>
+
+
+
 <!-- Custom JS -->
 <script>
-    mapboxgl.accessToken = "pk.eyJ1IjoibWFya2dyYWViZW5lciIsImEiOiJja3l4aGM1NzcwaWkwMm9wM2Zmc3FqODJhIn0.4EnvoDXzwuAjv1coIpr9jA";
+    mapboxgl.accessToken = mapBoxToken;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
+        zoom: 1,
         center: [-98.4916, 29.4252]
     });
 
     // the  geocode method from mapbox-geocoder-utils.js
-    geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxgl.accessToken).then(function(result) {
+    let goToGeocode = () => {
+    geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxgl.accessToken).then(function (result) {
         console.log(result);
         map.setCenter(result);
-        map.setZoom(20);
+        map.setZoom(18);
     });
+    };
+    // $(document).ready(function() {
+    $('#geocodeBtn').click(function(e){
+        goToGeocode();
+    })
+    $('#zoom5').click(function (e) {
+        map.flyTo({zoom: 5})
+    });
+    $('#zoom10').click(function (e) {
+        map.flyTo({zoom: 10})
+    });
+    $('#zoom15').click(function (e) {
+        map.flyTo({zoom: 15});
+    })
+    var perrysMarker = new mapboxgl.Marker()
+        .setLngLat([ -98.610928, 29.593225])
+        .addTo(map);
+
+    var alamoPopup = new mapboxgl.Popup()
+        .setHTML("<p>Fridays lunch 1/2 off the best porkchop!</p>")
+
+    perrysMarker.setPopup(alamoPopup)
+
+    // });
 </script>
 </body>
 </html>
