@@ -77,11 +77,14 @@ const users = [
 // console.log(longestEmail);
 
 //6.
-let nameString = users.reduce((prev, current) => {
-    return prev + current.name + ", "
-}, "Your instructors are: ")
-console.log(nameString);
+// let nameString = users.reduce((prev, current) => {
+//     return prev + current.name + ", "
+// }, "Your instructors are: ")
+// console.log(nameString);
 
+const names = users.reduce((names, {name}) =>
+    `${names}, ${name}`, "Your instructors are:")
+console.log(names);
 
 
 
