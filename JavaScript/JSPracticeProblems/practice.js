@@ -142,26 +142,42 @@
 // INPUT: “42992338111134”
 // EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4} (edited)
 
-let stringNum = "42992338111134";
-let stToArr = stringNum.split("");
-console.log(stToArr);
+// let stringNum = "42992338111134";
+// let stToArr = stringNum.split("");
+// console.log(stToArr);
+//
+//
+// let stringSorted = stToArr.sort();
+// console.log(stringSorted);
+//
+// let howManys = (arr) => {
+//     // create an object with diff values into new property's
+//     let var1 = {
+//         arr1: arr[0],// set first value into array
+//         newArr: function (){
+//         //    function to create a new property with the array of next values
+//         },
+//     };
+//     // loop through sorted array , push into property untill diff value then push new property
+//     for(let i = 1; i < arr.length; i++) {
+//         if(i === var1){
+//             arr.push();
+//         }
+//     }
+// }
 
+//Write a function that removes any duplicates from an array.
+let Input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
+// expected output: [2,3,5,8,1,6,7,4]
 
-let stringSorted = stToArr.sort();
-console.log(stringSorted);
+// let  uniq = (x) => {
+//     return x.sort().filter(function(item, pos, ary) {
+//         return !pos || item !== ary[pos - 1];
+//     });
+// }
+// console.log(uniq(Input));
 
-let howManys = (arr) => {
-    // create an object with diff values into new property's
-    let var1 = {
-        arr1: arr[0],// set first value into array
-        newArr: function (){
-        //    function to create a new property with the array of next values
-        },
-    };
-    // loop through sorted array , push into property untill diff value then push new property
-    for(let i = 1; i < arr.length; i++) {
-        if(i === var1){
-            arr.push();
-        }
-    }
+function uniq(a) {
+    return Array.from(new Set(a));
 }
+console.log(uniq(Input));
