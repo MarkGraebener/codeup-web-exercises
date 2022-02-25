@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Konami Code</title>
+  <style>
+    h1,p{
+      font-size:  3rem;
+      text-align: center;
+      margin-top: 300px;
+    }
+  </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+<p>enter the code</p>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+  "use strict";
+
+  let input = [];
+  let konami = ['arrowup', 'arrowup', 'arrowdown', 'arrowdown', 'arrowleft', 'arrowright', 'arrowleft', 'arrowright', 'b', 'a', 'enter'];
+
+  $(document).keyup(function(event){
+    let key = event.key.toLowerCase();
+    input.push(key);
+    console.log(input);
+    if (JSON.stringify(input) === JSON.stringify(konami)) {
+      alert("You have added 30 lives!");
+      $("h1").hide();
+      $("body").css("background-image", "url(https://cdn.wallpapersafari.com/89/43/QoFHCf.jpg)");
+      $("audio").prop("volume", 0.3);
+      $("#play")[0].play();
+    }//else {
+      //alert("wrong code cheater!!")
+    //}
+  })
+</script>
+</body>
+</html>

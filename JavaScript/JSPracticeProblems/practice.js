@@ -163,11 +163,11 @@
 //         if(i === var1){
 //             arr.push();
 //         }
-//     }
+//     }®
 // }
 
 //Write a function that removes any duplicates from an array.
-let Input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
+//let Input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
 // expected output: [2,3,5,8,1,6,7,4]
 
 // let  uniq = (x) => {
@@ -176,8 +176,13 @@ let Input = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
 //     });
 // }
 // console.log(uniq(Input));
+//
+//function uniq(a) {
+//    return Array.from(new Set(a));
+//}
+//console.log(uniq(Input));
 
-function uniq(a) {
-    return Array.from(new Set(a));
-}
-console.log(uniq(Input));
+// count how many vowels
+let str = "How Are you doing"
+let vowelCount = (string)  => {return string.match(/[aeiou]/gi).length;}
+console.log(vowelCount(str))
