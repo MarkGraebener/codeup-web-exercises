@@ -31,6 +31,7 @@
     if (JSON.stringify(input) === JSON.stringify(konami)) {
       alert("You have added 30 lives!");
       $("h1").hide();
+      $("p").hide();
       $("body").css("background-image", "url(https://cdn.wallpapersafari.com/89/43/QoFHCf.jpg)");
       $("audio").prop("volume", 0.3);
       $("#play")[0].play();
